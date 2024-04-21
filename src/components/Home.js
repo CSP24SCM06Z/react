@@ -224,6 +224,12 @@ export default function Home() {
                 Keras LSTM */}
             <div>
               <Typography variant="h5" component="div" gutterBottom>
+              The day of the week maximum number of issues created is : {githubRepoData?.createdAtImageUrls?.day_of_week_max_issues}
+              </Typography>
+              <Typography variant="h5" component="div" gutterBottom>
+              The day of the week maximum number of issues closed is : {githubRepoData?.closedAtImageUrls?.day_of_week_max_issues}
+              </Typography>
+              <Typography variant="h5" component="div" gutterBottom>
                 Timeseries Forecasting of Created Issues using Tensorflow and
                 Keras LSTM based on past month
               </Typography>
