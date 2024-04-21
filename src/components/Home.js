@@ -192,8 +192,8 @@ export default function Home() {
             />
             {/* Render barchart component for a monthly created issues for a selected repositories*/}
             <BarCharts
-              title={`Monthly Closed Issues for ${repository.value} in last 1 year`}
-              data={githubRepoData?.closed}
+              title={`Weekly Closed Issues for ${repository.value} in last 1 year`}
+              data={githubRepoData?.week_closed}
             />
             <Divider
               sx={{ borderBlockWidth: "3px", borderBlockColor: "#FFA500" }}
