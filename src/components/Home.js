@@ -185,7 +185,7 @@ export default function Home() {
             {/* Render barchart component for a monthly created issues for a selected repositories*/}
             <LineChart
               title={`Current Issues Qty of ${repository.value}`}
-              data={githubRepoData?.created}
+              data={githubRepoData?.open_issues}
             />
             <BarCharts
               title={`Monthly Created Issues for ${repository.value} in last 1 year`}
@@ -211,10 +211,10 @@ export default function Home() {
             <StackedBarChart
               title="Issue Statistics by Month"
               yAxisTitle="Number of Issues"
-              categories={githubRepoData?.createAndClosedIssues[0]}
+              categories={githubRepoData?.stack_keys}
               data={[
-                { name: 'Created', data: githubRepoData?.createAndClosedIssues[1] },
-                { name: 'Closed', data: githubRepoData?.createAndClosedIssues[2]}
+                { name: 'Created', data: githubRepoData?.stack_creates },
+                { name: 'Closed', data: githubRepoData?.stack_closes}
               ]}
             />
             <Divider
