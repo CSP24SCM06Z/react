@@ -29,20 +29,24 @@ const drawerWidth = 240;
 // List of GitHub repositories 
 const repositories = [
   {
-    key: "angular/angular",
-    value: "Angular",
+    key: "openai/openai-cookbook",
+    value: "OpenAI Cookbook",
   },
   {
-    key: "angular/angular-cli",
-    value: "Angular-cli",
+    key: "elastic/elasticsearch",
+    value: "Elasticsearch",
   },
   {
-    key: "angular/material",
-    value: "Angular Material",
+    key: "openai/openai-python",
+    value: "OpenAI Python",
   },
   {
-    key: "d3/d3",
-    value: "D3",
+    key: "milvus-io/pymilvus",
+    value: "Pymilvus",
+  },
+  {
+    key: "SebastianM/angular-google-maps",
+    value: "Angular Google Maps",
   },
 ];
 
