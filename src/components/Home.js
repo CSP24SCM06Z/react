@@ -66,8 +66,8 @@ export default function Home() {
   The repository "key" will be sent to flask microservice in a request body
   */
   const [repository, setRepository] = useState({
-    key: "angular/angular",
-    value: "Angular",
+    key: "openai/openai-cookbook",
+    value: "OpenAI Cookbook",
   });
   /*
   
