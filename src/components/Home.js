@@ -184,7 +184,7 @@ export default function Home() {
             {/* Render barchart component for a monthly created issues for a selected repositories*/}
             <LineChart
               title={`Issues for ${repository.value} in last 1 year`}
-              data={githubRepoData?.issue_number}
+              data={githubRepoData?.created}
             />
             <BarCharts
               title={`Monthly Created Issues for ${repository.value} in last 1 year`}
