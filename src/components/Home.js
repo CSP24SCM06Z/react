@@ -22,6 +22,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 // Import custom components
 import BarCharts from "./BarCharts";
+import StackedBarChart from "./StackedBarChart";
 import LineChart from "./LineChart";
 import Loader from "./Loader";
 import { ListItemButton } from "@mui/material";
@@ -183,17 +184,38 @@ export default function Home() {
           <div>
             {/* Render barchart component for a monthly created issues for a selected repositories*/}
             <LineChart
-              title={`Issues for ${repository.value} in last 1 year`}
+              title={`Current Issues Qty of ${repository.value}`}
               data={githubRepoData?.created}
             />
             <BarCharts
               title={`Monthly Created Issues for ${repository.value} in last 1 year`}
               data={githubRepoData?.created}
+              yAxisTitle={"Issues"}
             />
             {/* Render barchart component for a monthly created issues for a selected repositories*/}
             <BarCharts
               title={`Weekly Closed Issues for ${repository.value} in last 1 year`}
               data={githubRepoData?.week_closed}
+              yAxisTitle={"Issues"}
+            />
+            <BarCharts
+              title={`Current Star of ${repository.value}`}
+              data={githubRepoData?.starCount}
+              yAxisTitle={"Stars"}
+            />
+            <BarCharts
+              title={`Current Folks of ${repository.value}`}
+              data={githubRepoData?.forkCount}
+              yAxisTitle={"Forks"}
+            />
+            <StackedBarChart
+              title="Issue Statistics by Month"
+              yAxisTitle="Number of Issues"
+              categories={githubRepoData?.createAndClosedIssues[0]}
+              data={[
+                { name: 'Created', data: githubRepoData?.createAndClosedIssues[1] },
+                { name: 'Closed', data: githubRepoData?.createAndClosedIssues[2]}
+              ]}
             />
             <Divider
               sx={{ borderBlockWidth: "3px", borderBlockColor: "#FFA500" }}
